@@ -9,7 +9,7 @@ function Header(props) {
         <a
           href="/"
           onClick={(event) => {
-            event.preventDefault(); // a태그가 동작하는 기본동작을 방지 클릭해도 리로드가 동작하지않음
+            event.preventDefault(); // 기본동작을 방지 클릭해도 리로드가 동작하지않음
             props.onChangeMode();
           }}
         >
@@ -40,7 +40,7 @@ function Nav(props) {
           href={"/read/" + t.id}
           onClick={(event) => {
             event.preventDefault();
-            props.onChangeMode(Number(event.target.id)); // 여기서 타겟은 이벤트를 유발시킨 태그
+            props.onChangeMode(Number(event.target.id)); 
           }}
         >
           {t.title}
@@ -61,7 +61,7 @@ function Create(props) {
       <h2>Create</h2>
       <form
         onSubmit={(event) => {
-          // onSubmit 은 서브밋 버튼 클릭했을때 폼 태그에서 발생하는 이벤트
+     
           event.preventDefault();
           const title = event.target.title.value;
           const body = event.target.body.value;
@@ -90,7 +90,7 @@ function Update(props) {
       <h2>Update</h2>
       <form
         onSubmit={(event) => {
-          // onSubmit 은 서브밋 버튼 클릭했을때 폼 태그에서 발생하는 이벤트
+          // 서브밋 버튼 클릭했을때 폼 태그에서 발생하는 이벤트
           event.preventDefault();
           const title = event.target.title.value;
           const body = event.target.body.value;
